@@ -21,16 +21,16 @@ architecture behav of polynom_tb its
 	end component;
 
 	--Polynomial Definition (same as in module)
-	constant POLY_DEGREE : unsigned(3 downto 0) := to_unsigned(4); -- degree of polynomial
+	constant POLY_DEGREE : integer := 4; -- degree of polynomial
 
-	type poly_coeff_type is array(0 to POLY_DEGREE) of signed(x_sig'range);
+	type poly_coeff_type is array(0 to POLY_DEGREE) of signed(8 downto 0);
 
 	constant POLY_COEFF : poly_coeff_type := (
-			0 => -8,
-			1 => -3,
-			2 => 4,
-			3 => -2,
-			4 => 1
+			0 => to_signed(-8, POLY_COEFF(0)'length),
+			1 => to_signed(-3, POLY_COEFF(0)'length),
+			2 => to_signed(4, POLY_COEFF(0)'length),
+			3 => to_signed(-2, POLY_COEFF(0)'length),
+			4 => to_signed(1, POLY_COEFF(0)'length)
 		);
 
 	-- TODO: Implement your Testbench here
