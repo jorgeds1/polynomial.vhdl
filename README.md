@@ -1,2 +1,2 @@
-# vhdl.polynomial
-Template for 3rd Task: Re-Implementation of Task 2 in VHDL
+# VHDL Polynomial Template
+This is the template for the VHDL Polynomial task of the FPGAHS course. Please see the lab instructions for further Information.
